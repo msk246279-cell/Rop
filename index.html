@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Reset → Download</title></head>
+<body style="text-align:center;margin-top:100px;">
+  <h2>Reset & Download</h2>
+  <button onclick="downloadApp()" style="padding:12px 24px;font-size:16px;">Reset</button>
+
+  <script>
+    function downloadApp() {
+      const url = "https://github.com/msk246279-cell/apko/releases/download/Y/GGameGuardian32.apk";
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "GGameGuardian32.apk"; // কিছু ব্রাউজার এটার প্রয়োজন পড়ে না, তবু রাখা হলো
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+</html>
